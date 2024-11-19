@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Lesson 9 </title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header"></header>
+
+      <main class="main">
+         <!-- Б.Э.М -->
+
+         <!-- Блок -->
+         <!-- Независимый обьект.
+Не влияет на окружение (Внешние обьекты).
+
+Имя класса БЭМ блока:
+1)Имя должно соответствовать содержанию либо конструкции.
+2)Английский язык (Латиница)
+3)Нижний регистр
+4)Несколько слов разделяются дефисом.
+
+Мы можем вкладывать сколько угодно блоков друг в друга,
+также БЄМ блоки можно вкладывать в БЄМ єлементы
+-->
+
+         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, maxime, facilis magni nulla quisquam
+            pariatur hic laborum, iusto nisi explicabo est mollitia porro qui assumenda. Dicta dolorum ratione
+            reiciendis amet?</p>
+
+         <div class="who-we-are">
+            Я типа БЭМ блок
+         </div>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, maxime, facilis magni nulla quisquam
+               pariatur hic laborum, iusto nisi explicabo est mollitia porro qui assumenda. Dicta dolorum ratione
+               reiciendis amet?</p>
+   
+            <div class="who-we-are">
+               Я типа БЭМ блок
+            </div>
+   
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A repellat, ullam dicta, possimus nesciunt autem
+               voluptas veritatis, deserunt facere culpa aperiam ipsum eum doloribus dolores dolorum quo nisi laborum
+               provident.</p>
+   
+
+         <!-- Элемент -->
+
+         <!-- Зависимый обьект от своего БЭМ блока.
+ Всегда находится внутри БЭМ блока 
+ Может влиять на окружение (внешние обьекты)
+ -->
+
+         <!-- Имя класса БЭМ элемента:
+1) Всегда начинается с имени Первого родительского блока и отделяется двумя нижними подчеркиваниями (__)
+2)Имя должно соответствовать содержанию либо конструкции.
+3)Английский язык (Латиница)
+4)Нижний регистр
+5)Несколько слов разделяются дефисом.
+6) Отвечать на вопрос - Что это?
+
+БЭМ элементы можно вкладывать в другие БЭм элементы своего БЭМ блока.
+-->
+<!-- Это блок -->
+         <div class="who-we-are">
+            <!-- Это элемент -->
+            <h1 class="who-we-are__title">Я заголовок</h1>
+<!-- Это элемент -->
+            <p class="who-we-are__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab rem, maiores iure, voluptas
+               aspernatur nisi excepturi, placeat id ipsam ea earum nulla esse quis at optio beatae repellendus fuga
+               doloremque.</p>
+               <!-- Это блок -->
+               <a href="link">Я ссылка</a>
+         </div>
+
+         <div class="contents">
+<h2 class="contents__title"></h2>
+<div class="contents__text"></div>
+<div class="about">
+   <!-- Элемент -->
+   <p class="about__text"></p>
+</div>
+         </div>
+
+<!-- Пример БЭМ блока -->
+ <div class="promice">
+<div class="promice__title"></div>
+<div class="promice__sub-title"></div>
+<div class="promice__items">
+   <div class="promice__icon"></div>
+   <div class="item__body">
+      <div class="item__label"></div>
+      <div class="item__text"></div>
+   </div>
+</div>
+ </div>
+
+         <!-- Модификатор -->
+<!-- Позволяет вносить отличия для БЄМ блока либо БЄМ єлемента 
+
+Имя класса БЭМ элемента:
+1) Добавляется как ещё один класс для БЭМ блока либо БЭМ элемента.
+Начинается с полного имени БЭМ блока или БЭМ элемнта и отделяется 
+одним нижним подчеркиванием. (_)
+Имя должно соответстовать вноимым модификациям. 
+Отвечать на вопрос - Какой ? Что именно ?
+2) Английский язык (Латиница)
+3) Нижний регистр.
+4) Если слов несколько, разделяется дефисом (-)
+5)Никакой ИЕРАРХИИ !!!
+-->
+
+ <div class="who-we-are">
+   Вот он я -who-we-are 
+   <div class="who-we-are__title">
+      Я заголовок
+   </div>
+   <div class="who-we-are__text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque soluta rem culpa incidunt porro quas, quia rerum fugiat, consequatur distinctio repellendus vitae facilis eos cumque nesciunt ut sequi quae quisquam.
+   </div>
+ </div>
+
+ <div class="who-we-are who-we-are_pupple">
+   Вот он я -who-we-are  (Но не совсем)
+   <div class="who-we-are__title who-we-are__title_margin-font">
+      Я заголовок (Но не совсем такой же)
+   </div>
+   <div class="who-we-are__text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque soluta rem culpa incidunt porro quas, quia rerum fugiat, consequatur distinctio repellendus vitae facilis eos cumque nesciunt ut sequi quae quisquam.
+   </div>
+ </div> 
+
+ <!-- Микс -->
+      <!-- Смесь БЭМ блока и БЭМ элемента для одного обьекта.
+      При этом БЭМ элемент может выступить в роли БЭМ модификатора. 
+      -->
+
+      <div class="who-we-are">
+         Я типа БЭМ блок
+      </div>
+
+      <div class="main-page">
+         <!-- Одновременно и БЭМ блок и БЭМ элемент -->
+         <div class="who-we-are main-page__who-we-are">
+            Я типа БЭМ блок. Я ещё и элемент main-page
+         </div>
+      </div>
+
+<div class="contacts">
+   <div class="who-we-are">
+      Я типа БЭМ блок. Я ещё и элемент contacts
+   </div>
+</div>
+
+<div class="who-we-are">
+   <div class="who-we-are__header header-item">
+      <div class="header-item__title"></div>
+      <div class="header-item__sub-title"></div>
+   </div>
+</div>
+
+<div class="promice">
+   <div class="promice__header header-item">
+      <div class="header-item__title"></div>
+      <div class="header-item__sub-title"></div>
+   </div>
+</div>
+
+
+<!-- Пример  -->
+<div class="promice">
+   <div class="promice__header header-item">
+      <div class="header-item__title"></div>
+      <div class="header-item__sub-title"></div>
+   </div>
+   <div class="promice__icon"></div>
+   <div class="promice__items">
+      <div class="promice__item item-promice">
+         <div class="item-promice__icon"></div>
+         <div class="item-promice__body">
+            <div class="header-item__title"></div>
+            <div class="item-promice__text"></div>
+         </div>
+      </div>  
+   </div>
+</div>
+
+
+<!-- ......... -->
+
+<div class="block">
+<div class="block__title">Я заголовок</div>
+<div class="block__text">
+   Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus odit dolorum accusantium asperiores eum unde officiis exercitationem animi vel maxime inventore commodi soluta excepturi voluptas, incidunt laboriosam architecto vitae nemo!
+</div>
+<div class="block">
+   <div class="block__title">Я заголовок</div>
+   <div class="block__text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus odit dolorum accusantium asperiores eum unde officiis exercitationem animi vel maxime inventore commodi soluta excepturi voluptas, incidunt laboriosam architecto vitae nemo!
+   </div>
+   <div class="block">
+      <div class="block__title">Я заголовок</div>
+      <div class="block__text">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus odit dolorum accusantium asperiores eum unde officiis exercitationem animi vel maxime inventore commodi soluta excepturi voluptas, incidunt laboriosam architecto vitae nemo!
+      </div>
+      </div>
+   </div>
+</div>
+
+
+      </main>
+      <footer hidden class="footer"></footer>
+   </div>
+</body>
+
+</html>
