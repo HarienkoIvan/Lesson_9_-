@@ -1,0 +1,136 @@
+
+/* Обнуление стилей */
+*,
+*::before *::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+ 
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+img {
+    vertical-align: top;
+}
+
+html,body {
+    height: 100%;
+}
+
+/* По умолчанию 16 рх */
+html {
+    font-size: 16px;
+}
+
+body {
+  line-height: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+} 
+ 
+.wrapper {
+    min-height: 100%;  
+    overflow: hidden;
+    padding: 50px;
+}
+
+/* .........lesson9.......... */
+
+
+p{
+    background-color: brown;
+    padding: 15px;
+    margin: 0px;
+}
+
+/* <!-- Блок -->
+<!-- Независимый обьект.
+Не влияет на окружение (Внешние обьекты) */
+ 
+/* В CSS обращаемся к БЭМ блоку селекторам первого уровня */
+
+.who-we-are {
+background-color:  rgb(225, 0, 255);
+color: chartreuse;
+/* Можно */
+padding: 15px;
+
+/* Нельзя
+margin: 15px; */
+}
+
+.who-we-are__header{
+    margin: 0px 0px 36px 0px;
+}
+
+.main-page__who-we-are {
+    margin: 0px 0px 30px 0px ;
+}
+
+
+
+.who-we-are__title {
+    font-size: 20px;
+margin: 0px 0px 15px 0px ;
+}
+
+.link {
+    font-size: 20px;
+    color: black;
+}
+
+
+/*  Модифицированный блок */
+.who-we-are_pupple {
+    background-color: #591f8b;
+}
+
+.who-we-are__title_margin-font {
+    font-size: 50px; 
+    margin: 0px 0px 30px 0px;
+}
+
+.header-item {
+
+}
+.header-item__title {
+}
+.header-item__sub-title {
+}
+
+
+
+.block {
+    border: 1px solid black;
+    padding: 15px;
+    background-color: firebrick;
+}
+
+.block__title {
+    font-size: 40px;
+    margin: 0px 0px 15px 0px;
+}
+.block__text {
+}
